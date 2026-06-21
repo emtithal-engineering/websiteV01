@@ -1,0 +1,697 @@
+﻿<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="امتثال الهندسية للاستشارات الأمن والسلامة - خدمات التقارير الفنية وشهادات السلامة وتجديد رخص الدفاع المدني.">
+  <title>امتثال الهندسية | الاستشارات الأمن والسلامة</title>
+  <link rel="preload" href="assets/logo/logo-light.svg" as="image">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container contact-line">
+      <span data-site="address">{{ADDRESS}}</span>
+      <span><a data-site="phone" href="tel:{{PHONE}}">{{PHONE}}</a> · <a data-site="email"
+          href="mailto:info.emtithal@gmail.com">info.emtithal@gmail.com</a></span>
+    </div>
+  </div>
+  <header class="header">
+    <div class="container navbar">
+      <a class="logo" href="#home" data-route="home" aria-label="امتثال الهندسية">
+        <img src="assets/logo/logo-light.svg" alt="امتثال الهندسية" width="260" height="64">
+      </a>
+      <button class="btn ghost menu-btn" id="menuBtn" type="button" aria-label="فتح القائمة">☰</button>
+      <nav class="navlinks" id="navlinks" aria-label="التنقل الرئيسي">
+        <a href="#home" data-route="home" class="active">الرئيسية</a>
+        <a href="#services" data-route="services">الخدمات</a>
+        <a href="#services" data-route="services">تقديم طلب</a>
+        <a href="#track" data-route="track">تتبع الطلب</a>
+        <a href="#about" data-route="about">عن الشركة</a>
+        <a href="#contact" data-route="contact">تواصل معنا</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page active" id="home">
+      <div class="hero">
+        <div class="container hero-grid">
+          <div>
+            <span class="eyebrow">استشارات هندسية للأمن والسلامة</span>
+            <h1>حلول هندسية متخصصة في الأمن والسلامة والامتثال</h1>
+            <p class="lead">نقدم خدمات التقارير الفنية وشهادات السلامة وتجديد الرخص وفق إجراءات واضحة وتجربة رقمية سهلة.
+            </p>
+            <div class="actions">
+              <a class="btn primary" href="#services" data-route="services">طلب خدمة</a>
+              <a class="btn whatsapp" target="_blank" rel="noopener"
+                data-whatsapp="السلام عليكم، أرغب في طلب خدمة من امتثال الهندسية.">واتساب</a>
+            </div>
+          </div>
+          <div class="hero-panel" aria-label="ملخص خدمة هندسية">
+            <div class="report-card">
+              <span class="badge">تقرير فني</span>
+              <div class="report-row"></div>
+              <div class="report-row"></div>
+              <div class="report-row"></div>
+              <p>رقم طلب تجريبي: EMT-2026-250184</p>
+            </div>
+            <div class="hero-metrics">
+              <span>تقارير فورية</span><span>شهادات سلامة</span><span>تتبع بدون دخول</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="promo-slider-section">
+        <div class="promo-slider" id="promoSlider">
+          <div class="promo-slide active" data-service="instant-technical-report">
+            <img src="assets/images/offers/1.png" alt="التقرير الفني الفوري" loading="lazy">
+            <div class="promo-overlay">
+              <h2>التقرير الفني الفوري</h2>
+              <p>تقرير فني سريع للمنشآت المستوفية للمتطلبات الأساسية خلال 24 ساعة</p>
+              <button class="btn primary" data-service="instant-technical-report" data-route="service-details">اطلب
+                الآن</button>
+            </div>
+          </div>
+          <div class="promo-slide" data-service="non-instant-technical-report">
+            <img src="assets/images/offers/2.png" alt="التقرير الفني غير الفوري" loading="lazy">
+            <div class="promo-overlay">
+              <h2>التقرير الفني غير الفوري</h2>
+              <p>تقرير فني شامل يتطلب مراجعة مخططات وشهادات مطابقة وإنهاء أعمال</p>
+              <button class="btn primary" data-service="non-instant-technical-report" data-route="service-details">اطلب
+                الآن</button>
+            </div>
+          </div>
+          <div class="promo-slide" data-service="safety-equipment-certificate">
+            <img src="assets/images/offers/3.png" alt="شهادة تركيب أدوات السلامة" loading="lazy">
+            <div class="promo-overlay">
+              <h2>شهادة تركيب أدوات السلامة والوقاية من الحريق</h2>
+              <p>إصدار شهادة منظمة لأدوات وأنظمة السلامة والوقاية من الحريق للمنشآت</p>
+              <button class="btn primary" data-service="safety-equipment-certificate" data-route="service-details">اطلب
+                الآن</button>
+            </div>
+          </div>
+          <div class="promo-slide" data-service="maintenance-contract">
+            <img src="assets/images/offers/4.png" alt="عقد الصيانة الشامل" loading="lazy">
+            <div class="promo-overlay">
+              <h2>عقد الصيانة الشامل</h2>
+              <p>تنظيم عقود الصيانة المطلوبة لأنظمة السلامة والوقاية</p>
+              <button class="btn primary" data-service="maintenance-contract" data-route="service-details">اطلب
+                الآن</button>
+            </div>
+          </div>
+          <div class="promo-slide" data-service="civil-defense-license-renewal">
+            <img src="assets/images/offers/5.png" alt="تجديد رخصة الدفاع المدني" loading="lazy">
+            <div class="promo-overlay">
+              <h2>تجديد رخصة الدفاع المدني</h2>
+              <p>متابعة تجديد ترخيص الدفاع المدني للمنشآت مع تنظيم مستندات السلامة السابقة</p>
+              <button class="btn whatsapp" target="_blank" rel="noopener"
+                data-whatsapp="السلام عليكم، أرغب في الاستفسار عن تجديد رخصة الدفاع المدني.">تواصل معنا</button>
+            </div>
+          </div>
+          <div class="promo-slide" data-service="engineering-drawing">
+            <img src="assets/images/offers/6.png" alt="المخطط الهندسي للسلامة" loading="lazy">
+            <div class="promo-overlay">
+              <h2>المخطط الهندسي للسلامة</h2>
+              <p>إعداد أو مراجعة المخططات الهندسية المرتبطة بمتطلبات السلامة</p>
+              <button class="btn primary" data-service="engineering-drawing" data-route="service-details">اطلب
+                الآن</button>
+            </div>
+          </div>
+          <button class="promo-nav promo-prev" aria-label="السابق">❯</button>
+          <button class="promo-nav promo-next" aria-label="التالي">❮</button>
+          <div class="promo-dots"></div>
+        </div>
+      </section>
+      <section class="section container">
+        <div class="section-head">
+          <div>
+            <h2>خدماتنا الرئيسية</h2>
+            <p class="sub">اختر الخدمة المناسبة وابدأ الطلب أو التواصل المباشر.</p>
+          </div>
+          <a class="btn ghost" href="#services" data-route="services">عرض كل الخدمات</a>
+        </div>
+        <div class="grid four" data-services></div>
+      </section>
+      <section class="section offers-section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>عروض وخدمات مميزة</h2>
+              <p class="sub">استفد من عروضنا الخاصة وخدماتنا الاحترافية بأفضل الأسعار.</p>
+            </div>
+          </div>
+          <div class="offers-carousel" id="offersCarousel">
+            <div class="offer-card" data-service="instant-technical-report">
+              <div class="offer-image">
+                <img src="assets/images/offers/1.png" alt="التقرير الفني الفوري">
+                <div class="offer-badge">عرض خاص</div>
+              </div>
+              <div class="offer-content">
+                <h3>التقرير الفني الفوري</h3>
+                <p class="offer-description">تقرير فني سريع للمنشآت المستوفية للمتطلبات الأساسية خلال 24 ساعة.</p>
+                <div class="offer-price">460 ﷼</div>
+                <button class="btn primary offer-btn" data-service="instant-technical-report"
+                  data-route="service-details">اطلب الآن</button>
+              </div>
+            </div>
+            <div class="offer-card" data-service="non-instant-technical-report">
+              <div class="offer-image">
+                <img src="assets/images/offers/2.png" alt="التقرير الفني غير الفوري">
+                <div class="offer-badge">عرض خاص</div>
+              </div>
+              <div class="offer-content">
+                <h3>التقرير الفني غير الفوري</h3>
+                <p class="offer-description">تقرير فني شامل يتطلب مراجعة مخططات وشهادات مطابقة وإنهاء أعمال.</p>
+                <div class="offer-price">550 ﷼</div>
+                <button class="btn primary offer-btn" data-service="non-instant-technical-report"
+                  data-route="service-details">اطلب الآن</button>
+              </div>
+            </div>
+            <div class="offer-card" data-service="safety-equipment-certificate">
+              <div class="offer-image">
+                <img src="assets/images/offers/3.png" alt="شهادة تركيب أدوات السلامة">
+                <div class="offer-badge">عرض خاص</div>
+              </div>
+              <div class="offer-content">
+                <h3>شهادة تركيب أدوات السلامة والوقاية من الحريق</h3>
+                <p class="offer-description">إصدار شهادة منظمة لأدوات وأنظمة السلامة والوقاية من الحريق للمنشآت.</p>
+                <div class="offer-price">350 ﷼</div>
+                <button class="btn primary offer-btn" data-service="safety-equipment-certificate"
+                  data-route="service-details">اطلب الآن</button>
+              </div>
+            </div>
+            <div class="offer-card" data-service="maintenance-contract">
+              <div class="offer-image">
+                <img src="assets/images/offers/4.png" alt="عقد الصيانة الشامل">
+                <div class="offer-badge">عرض خاص</div>
+              </div>
+              <div class="offer-content">
+                <h3>عقد الصيانة الشامل</h3>
+                <p class="offer-description">تنظيم عقود الصيانة المطلوبة لأنظمة السلامة والوقاية.</p>
+                <div class="offer-price">1000 ﷼</div>
+                <button class="btn primary offer-btn" data-service="maintenance-contract"
+                  data-route="service-details">اطلب الآن</button>
+              </div>
+            </div>
+            <div class="offer-card" data-service="civil-defense-license-renewal">
+              <div class="offer-image">
+                <img src="assets/images/offers/5.png" alt="تجديد رخصة الدفاع المدني">
+                <div class="offer-badge">عرض خاص</div>
+              </div>
+              <div class="offer-content">
+                <h3>تجديد رخصة الدفاع المدني</h3>
+                <p class="offer-description">متابعة تجديد ترخيص الدفاع المدني للمنشآت مع تنظيم مستندات السلامة السابقة.
+                </p>
+                <div class="offer-price">تواصل معنا</div>
+                <button class="btn whatsapp offer-btn" target="_blank" rel="noopener"
+                  data-whatsapp="السلام عليكم، أرغب في الاستفسار عن تجديد رخصة الدفاع المدني.">تواصل معنا</button>
+              </div>
+            </div>
+            <div class="offer-card" data-service="engineering-drawing">
+              <div class="offer-image">
+                <img src="assets/images/offers/6.png" alt="المخطط الهندسي للسلامة">
+                <div class="offer-badge">عرض خاص</div>
+              </div>
+              <div class="offer-content">
+                <h3>المخطط الهندسي للسلامة</h3>
+                <p class="offer-description">إعداد أو مراجعة المخططات الهندسية المرتبطة بمتطلبات السلامة.</p>
+                <div class="offer-price">تواصل معنا</div>
+                <button class="btn primary offer-btn" data-service="engineering-drawing"
+                  data-route="service-details">اطلب الآن</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section about-home">
+        <div class="container grid two">
+          <div>
+            <span class="eyebrow">من نحن</span>
+            <h2>من نحن - امتثال الهندسية للاستشارات الأمن والسلامة</h2>
+            <p>امتثال الهندسية مكتب هندسي سعودي متخصص في الاستشارات الهندسية للأمن والسلامة، وتقديم الحلول الفنية
+              الداعمة للامتثال للأنظمة والاشتراطات المعتمدة في المملكة العربية السعودية. نعمل على مساعدة المنشآت والجهات
+              المختلفة في تحقيق أعلى مستويات السلامة ورفع جاهزيتها التشغيلية من خلال خدمات هندسية احترافية مبنية على
+              الدقة والالتزام والمعايير المعتمدة.</p>
+            <p>تشمل خدماتنا إعداد التقارير الفنية، المخططات الهندسية للأمن والسلامة، شهادات وتجهيزات الامتثال، دعم
+              إجراءات التراخيص والتجديد، ومراجعة متطلبات السلامة بما يحقق توافق المنشآت مع المتطلبات التنظيمية ذات
+              العلاقة.</p>
+            <p>يعتمد فريقنا على الخبرة الهندسية المتخصصة، والمنهجيات الحديثة، والالتزام بأعلى معايير الجودة لضمان تقديم
+              حلول عملية وموثوقة تدعم استدامة الأعمال وتحافظ على الأرواح والممتلكات.</p>
+            <p class="about-statement">في امتثال الهندسية، نؤمن أن السلامة ليست إجراء نظاميا فقط، بل عنصر أساسي
+              لاستمرارية الأعمال وبناء بيئات أكثر أمانا وكفاءة.</p>
+          </div>
+          <div class="about-values" aria-label="قيم امتثال الهندسية">
+            <article class="card value-card">
+              <h3>الامتثال بثقة</h3>
+              <p>حلول هندسية ترتكز على الأنظمة والمعايير المعتمدة</p>
+            </article>
+            <article class="card value-card">
+              <h3>خبرة هندسية متخصصة</h3>
+              <p>فريق من المهندسين والاستشاريين بخبرة عملية في الأمن والسلامة</p>
+            </article>
+            <article class="card value-card">
+              <h3>جودة ودقة تنفيذ</h3>
+              <p>مخرجات فنية احترافية وفق أفضل الممارسات والمعايير</p>
+            </article>
+            <article class="card value-card">
+              <h3>شراكة ودعم مستمر</h3>
+              <p>مساندة فنية ومتابعة لضمان استدامة الامتثال ورفع مستوى الجاهزية</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section why-home">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>لماذا تختار امتثال الهندسية؟</h2>
+              <p class="sub">في بيئة تتطور فيها متطلبات الأمن والسلامة بشكل مستمر، نعمل في امتثال الهندسية على تقديم
+                حلول هندسية موثوقة تساعد المنشآت على تحقيق الامتثال، رفع الجاهزية، وتعزيز استدامة الأعمال وفق أعلى
+                المعايير المهنية.</p>
+            </div>
+          </div>
+          <div class="grid three why-grid">
+            <article class="card why-card"><span class="why-icon">🛡️</span>
+              <h3>حلول هندسية متخصصة</h3>
+              <p>خدمات استشارية وفنية متكاملة تدعم تحقيق متطلبات الأمن والسلامة والامتثال التنظيمي.</p>
+            </article>
+            <article class="card why-card"><span class="why-icon">📐</span>
+              <h3>خبرة هندسية موثوقة</h3>
+              <p>فريق متخصص من المهندسين والاستشاريين بخبرة عملية في إعداد الحلول الفنية والتقارير والدعم الهندسي.</p>
+            </article>
+            <article class="card why-card"><span class="why-icon">✓</span>
+              <h3>التزام بالدقة والجودة</h3>
+              <p>تنفيذ الأعمال وفق منهجية واضحة ومعايير مهنية تضمن جودة المخرجات والالتزام بالمواعيد.</p>
+            </article>
+            <article class="card why-card"><span class="why-icon">📋</span>
+              <h3>دعم الامتثال والاعتمادات</h3>
+              <p>مساندة المنشآت في استيفاء المتطلبات والاشتراطات المعتمدة وإجراءات الجاهزية النظامية.</p>
+            </article>
+            <article class="card why-card"><span class="why-icon">🤝</span>
+              <h3>متابعة وشراكة مستمرة</h3>
+              <p>نؤمن ببناء علاقات طويلة الأمد قائمة على الثقة، والاستجابة، والدعم الفني المستمر.</p>
+            </article>
+            <article class="card why-card"><span class="why-icon">🚀</span>
+              <h3>حلول عملية قابلة للتنفيذ</h3>
+              <p>توصيات هندسية واقعية تساعد على رفع مستوى السلامة وتحقيق نتائج مستدامة.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section container">
+        <div class="section-head">
+          <div>
+            <h2>أرقامنا</h2>
+            <p class="sub">مؤشرات تشغيلية تعكس حجم الخدمات المقدمة.</p>
+          </div>
+        </div>
+        <div class="grid three">
+          <div class="card"><span class="counter" data-count="2500">0+</span>
+            <p>تقارير فنية فورية</p>
+          </div>
+          <div class="card"><span class="counter" data-count="1800">0+</span>
+            <p>تقارير فنية غير فورية</p>
+          </div>
+          <div class="card"><span class="counter" data-count="4000">0+</span>
+            <p>شهادات سلامة</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="page" id="services">
+      <div class="page-hero">
+        <div class="container">
+          <div class="crumb">الرئيسية / الخدمات</div>
+          <h1 class="page-title">خدمات امتثال الهندسية</h1>
+          <p class="lead">خدمات منظمة للأمن والسلامة، من التقارير الفنية حتى التأهيل والتوريد والتركيب.</p>
+        </div>
+      </div>
+      <div class="section container">
+        <div class="grid three" data-services></div>
+      </div>
+    </section>
+
+    <section class="page" id="service-details">
+      <div class="page-hero">
+        <div class="container">
+          <div class="crumb">الخدمات / تفاصيل الخدمة</div>
+          <h1 class="page-title" id="detailTitle"></h1>
+          <p class="lead" id="detailDesc"></p>
+        </div>
+      </div>
+      <div class="section container detail-layout">
+        <div class="detail-main">
+          <div class="card requirements-card">
+            <h2>متطلبات الخدمة</h2>
+            <ul class="list" id="detailDocuments"></ul>
+            <div class="actions" style="margin-top:18px"><a class="btn ghost" href="#services"
+                data-route="services">العودة للخدمات</a></div>
+          </div>
+          <div class="issue-options">
+            <div class="section-head compact">
+              <div>
+                <h2>اختيار طريقة الإصدار</h2>
+                <p class="sub">اختر المسار المناسب لإكمال الطلب حسب رغبتك.</p>
+              </div>
+            </div>
+            <div class="grid two issue-grid">
+              <article class="card issue-card">
+                <div class="icon">⌁</div>
+                <h3>تقديم إلكتروني</h3>
+                <p>إكمال الطلب إلكترونيا مع تعبئة البيانات ورفع الملفات المطلوبة لكل خدمة.</p><a class="btn primary"
+                  id="electronicRequestAction" href="#request" data-route="request">متابعة إلكترونيا</a>
+              </article>
+              <article class="card issue-card">
+                <div class="icon">☎</div>
+                <h3>تقديم يدوي</h3>
+                <p>التواصل مع المكتب عبر واتساب لإرسال المرفقات ومتابعة الطلب يدويا مع الفريق.</p><a
+                  class="btn whatsapp" id="manualRequestAction" target="_blank" rel="noopener">الانتقال لواتساب</a>
+              </article>
+            </div>
+          </div>
+        </div>
+        <aside class="card price-box price-breakdown">
+          <h2>تفصيل السعر</h2>
+          <p data-price-tier>سعر ثابت</p>
+          <div class="price-lines">
+            <div><span>السعر بدون الضريبة</span><strong data-price-base>550 ريال</strong></div>
+            <div><span>ضريبة القيمة المضافة 15%</span><strong data-price-vat>82.50 ريال</strong></div>
+            <div class="price-total"><span>الإجمالي شامل الضريبة</span><strong data-price-total>632.50 ريال</strong>
+            </div>
+          </div>
+          <p class="price-note" id="priceNote">يتم حساب الضريبة تلقائيا حسب النسبة المعتمدة في المملكة العربية السعودية.
+          </p>
+        </aside>
+      </div>
+    </section>
+    <section class="page" id="request">
+      <div class="page-hero">
+        <div class="container">
+          <div class="crumb">الرئيسية / تقديم طلب</div>
+          <h1 class="page-title">نموذج طلب خدمة</h1>
+          <p class="lead">نموذج موحد يلتقط بيانات المنشأة ويولد رقم طلب للتتبع.</p>
+        </div>
+      </div>
+      <div class="section container grid two">
+        <form class="card" id="requestForm">
+          <div class="form-grid">
+            <div class="field full"><label for="selectedServiceInput">الخدمة</label><input id="selectedServiceInput"
+                readonly></div>
+            <div class="field full" id="shopAreaField" style="display:none"><label for="shopArea">مساحة المحل (متر
+                مربع)</label><input id="shopArea" type="number" min="1" placeholder="أدخل مساحة المحل"></div>
+            <div class="field full"><label for="phoneNumber">رقم الجوال</label>
+              <div class="phone-input-wrapper">
+                <span class="phone-country"><img src="assets/icons/العلم السعودي.png" alt="🇸🇦" class="flag-icon">
+                  +966</span>
+                <input id="phoneNumber" type="tel" maxlength="9" placeholder="5XXXXXXXX" required>
+              </div>
+              <p class="phone-hint">يجب أن يبدأ الرقم بـ 5 ويتكون من 9 أرقام</p>
+            </div>
+            <div class="field full upload-section">
+              <h2>رفع الملفات المطلوبة</h2>
+              <p class="sub">تظهر خانات الرفع حسب متطلبات الخدمة المختارة.</p>
+              <div class="upload-grid" id="requiredUploads"></div>
+            </div>
+            <div class="field full vat-invoice-section">
+              <h2>طلب فاتورة ضريبية</h2>
+              <p class="sub">هل ترغب بإصدار فاتورة ضريبية رسمية؟</p>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="requestVatInvoice" value="yes" id="vatInvoiceYes">
+                  <span>نعم</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="requestVatInvoice" value="no" id="vatInvoiceNo" checked>
+                  <span>لا</span>
+                </label>
+              </div>
+              <div class="vat-invoice-fields" id="vatInvoiceFields" style="display: none;">
+                <div class="field full">
+                  <label for="companyName">اسم الشركة / المؤسسة <span class="required-star">*</span></label>
+                  <input id="companyName" type="text" placeholder="أدخل اسم الشركة / المؤسسة">
+                </div>
+                <div class="field full">
+                  <label for="companyCr">رقم السجل التجاري <span class="required-star">*</span></label>
+                  <input id="companyCr" type="text" placeholder="أدخل رقم السجل التجاري">
+                </div>
+                <div class="field full">
+                  <label for="companyVat">الرقم الضريبي <span class="required-star">*</span></label>
+                  <input id="companyVat" type="text" placeholder="أدخل الرقم الضريبي">
+                </div>
+                <div class="field full">
+                  <label for="companyPhone">رقم الجوال <span class="required-star">*</span></label>
+                  <div class="phone-input-wrapper">
+                    <span class="phone-country"><img src="assets/icons/العلم السعودي.png" alt="🇸🇦" class="flag-icon">
+                      +966</span>
+                    <input id="companyPhone" type="tel" maxlength="9" placeholder="5XXXXXXXX">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn primary" type="submit" style="margin-top:18px;width:100%">إرسال الطلب</button>
+        </form>
+        <aside class="card price-box price-breakdown">
+          <h2>ملخص السعر</h2>
+          <p>يعرض ملخص السعر والضريبة للخدمة المختارة.</p>
+          <p data-price-tier>سعر ثابت</p>
+          <div class="price-lines">
+            <div><span>السعر بدون الضريبة</span><strong data-price-base>550 ريال</strong></div>
+            <div><span>ضريبة القيمة المضافة 15%</span><strong data-price-vat>82.50 ريال</strong></div>
+            <div class="price-total"><span>الإجمالي شامل الضريبة</span><strong data-price-total>632.50 ريال</strong>
+            </div>
+          </div>
+          <div class="actions" style="margin-top:18px"><a class="btn whatsapp" id="renewalWhatsApp" target="_blank"
+              rel="noopener">تحدث مع المسؤول</a></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="page" id="payment">
+      <div class="page-hero">
+        <div class="container">
+          <div class="crumb">الرئيسية / الدفع</div>
+          <h1 class="page-title">إتمام الدفع</h1>
+          <p class="lead">يرجى اختيار طريقة الدفع المناسبة لإتمام طلبك.</p>
+        </div>
+      </div>
+      <div class="section container grid two">
+        <div class="card">
+          <h2>ملخص الطلب</h2>
+          <p><strong>رقم الطلب:</strong> <span id="paymentRequestNumber"></span></p>
+          <p><strong>الخدمة المطلوبة:</strong> <span id="paymentServiceName"></span></p>
+          <p><strong>رقم الجوال:</strong> <span id="paymentCustomerPhone"></span></p>
+          <p><strong>المرفقات:</strong> <span id="paymentDocuments"></span></p>
+          <div id="paymentVatInfo"
+            style="display:none; margin-top:15px; padding:15px; background:#f0fdf4; border-radius:8px; border:1px solid #22c55e;">
+            <p style="margin:0; color:#166534;"><strong>طلب فاتورة ضريبية:</strong> نعم</p>
+            <p style="margin:5px 0 0; color:#166534;"><strong>اسم الشركة:</strong> <span id="paymentCompanyName"></span>
+            </p>
+            <p style="margin:5px 0 0; color:#166534;"><strong>رقم السجل التجاري:</strong> <span
+                id="paymentCompanyCr"></span></p>
+            <p style="margin:5px 0 0; color:#166534;"><strong>الرقم الضريبي:</strong> <span
+                id="paymentCompanyVat"></span></p>
+          </div>
+          <div style="margin-top:20px; padding-top:20px; border-top:1px solid #e5e7eb;">
+            <p><strong>السعر قبل الضريبة:</strong> <span id="paymentPriceBase" style="font-size:16px;"></span></p>
+            <p><strong>ضريبة القيمة المضافة 15%:</strong> <span id="paymentPriceVat" style="font-size:16px;"></span></p>
+            <p><strong>المبلغ الإجمالي:</strong> <span id="paymentAmount"
+                style="font-size:18px; font-weight:bold; color:#36B98C;"></span></p>
+          </div>
+        </div>
+        <div class="card">
+          <h2>اختر طريقة الدفع</h2>
+          <div class="payment-methods">
+            <label class="payment-method">
+              <input type="radio" name="paymentMethod" value="card" checked>
+              <div class="payment-option">
+                <div class="payment-icon">💳</div>
+                <div>
+                  <strong>بطاقة ائتمان</strong>
+                  <p class="sub">Visa / Mastercard</p>
+                </div>
+              </div>
+            </label>
+            <label class="payment-method">
+              <input type="radio" name="paymentMethod" value="mada">
+              <div class="payment-option">
+                <div class="payment-icon mada-icon">M</div>
+                <div>
+                  <strong>مدى</strong>
+                  <p class="sub">البطاقة السعودية</p>
+                </div>
+              </div>
+            </label>
+          </div>
+          <button class="btn primary" id="payNowBtn" style="margin-top:18px;width:100%">دفع الآن</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="payment-success">
+      <div class="section container">
+        <div class="card" style="text-align:center;max-width:740px;margin:auto">
+          <div class="icon" style="margin:auto auto 12px">✓</div>
+          <h1 class="page-title">تم الدفع بنجاح</h1>
+          <p class="lead">تم استلام دفعتك بنجاح.</p>
+          <p><strong>رقم الطلب:</strong> <span id="successRequestNumber"></span></p>
+          <p><strong>الخدمة:</strong> <span id="successServiceName"></span></p>
+          <p><strong>المبلغ المدفوع:</strong> <span id="successAmount"></span></p>
+          <div class="actions" style="justify-content:center"><a class="btn primary" href="#track"
+              data-route="track">تتبع الطلب</a><a class="btn ghost" href="#home" data-route="home">العودة للرئيسية</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="payment-failed">
+      <div class="section container">
+        <div class="card" style="text-align:center;max-width:740px;margin:auto">
+          <div class="icon" style="margin:auto auto 12px;color:#dc2626">✕</div>
+          <h1 class="page-title">فشل الدفع</h1>
+          <p class="lead">عذراً، لم يتم إتمام الدفع بنجاح.</p>
+          <div class="actions" style="justify-content:center"><a class="btn primary" href="#payment"
+              data-route="payment">إعادة المحاولة</a><a class="btn whatsapp" target="_blank" rel="noopener"
+              data-whatsapp="السلام عليكم، واجهت مشكلة في الدفع وأحتاج مساعدة.">تواصل مع الدعم</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="request-success">
+      <div class="section container">
+        <div class="card" style="text-align:center;max-width:740px;margin:auto">
+          <div class="icon" style="margin:auto auto 12px">✓</div>
+          <h1 class="page-title">تم استلام الطلب</h1>
+          <p class="lead">رقم طلبك هو <strong id="generatedNumber">EMT-2026-250184</strong></p>
+          <div class="actions" style="justify-content:center"><a class="btn primary" href="#track"
+              data-route="track">تتبع الطلب</a><a class="btn whatsapp" target="_blank" rel="noopener"
+              data-whatsapp="السلام عليكم، تم تقديم طلب وأرغب في المتابعة.">واتساب</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="track">
+      <div class="page-hero">
+        <div class="container">
+          <div class="crumb">الرئيسية / تتبع الطلب</div>
+          <h1 class="page-title">تتبع الطلب</h1>
+          <p class="lead">أدخل رقم الطلب لعرض الحالة الحالية والوقت المتوقع للإنجاز بدون تسجيل دخول.</p>
+        </div>
+      </div>
+      <div class="section container grid two">
+        <form class="card" id="trackForm">
+          <div class="field"><label for="trackInput">رقم الطلب</label><input id="trackInput"
+              placeholder="EMT-2026-250184" required></div><button class="btn primary" type="submit">بحث</button>
+        </form>
+        <div class="card" id="trackResult" hidden>
+          <h2>الحالة الحالية</h2>
+          <p>رقم الطلب: <strong id="trackNumber">EMT-2026-250184</strong></p>
+          <p>الحالة: <span class="status">قيد المراجعة الهندسية</span></p>
+          <p>الإنجاز المتوقع: خلال 24-72 ساعة حسب الخدمة.</p>
+          <div class="timeline">
+            <div class="step"><span class="dot"></span>
+              <div><strong>استلام الطلب</strong>
+                <p>تم إنشاء رقم الطلب.</p>
+              </div>
+            </div>
+            <div class="step"><span class="dot"></span>
+              <div><strong>المراجعة</strong>
+                <p>جاري فحص البيانات والمتطلبات.</p>
+              </div>
+            </div>
+            <div class="step muted"><span class="dot"></span>
+              <div><strong>الإصدار</strong>
+                <p>يتم التسليم بعد اكتمال المراجعة.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="about">
+      <div class="page-hero">
+        <div class="container">
+          <div class="crumb">الرئيسية / عن الشركة</div>
+          <h1 class="page-title">عن امتثال الهندسية</h1>
+          <p class="lead">شركة هندسية متخصصة في خدمات الأمن والسلامة والامتثال، تركز على وضوح الإجراءات وسهولة المتابعة
+            لأصحاب المنشآت.</p>
+        </div>
+      </div>
+      <div class="section container grid four">
+        <div class="card"><span class="counter">+10</span>
+          <p>سنوات خبرة</p>
+        </div>
+        <div class="card"><span class="counter">2500+</span>
+          <p>تقارير فورية</p>
+        </div>
+        <div class="card"><span class="counter">1800+</span>
+          <p>تقارير غير فورية</p>
+        </div>
+        <div class="card"><span class="counter">4000+</span>
+          <p>شهادات سلامة</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="contact">
+      <div class="page-hero">
+        <div class="container">
+          <div class="crumb">الرئيسية / تواصل معنا</div>
+          <h1 class="page-title">تواصل معنا</h1>
+          <p class="lead">فريق امتثال الهندسية جاهز لاستقبال استفساراتك وطلباتك.</p>
+        </div>
+      </div>
+      <div class="section container grid two">
+        <div class="card">
+          <h2>بيانات التواصل</h2>
+          <p><strong>الهاتف:</strong> <a data-site="phone" href="tel:{{PHONE}}">{{PHONE}}</a></p>
+          <p><strong>البريد:</strong> <a data-site="email"
+              href="mailto:info.emtithal@gmail.com">info.emtithal@gmail.com</a></p>
+          <p><strong>العنوان:</strong> <span data-site="address">{{ADDRESS}}</span></p>
+          <p><strong>ساعات الدوام:</strong> الأحد - الخميس: <span class="ltr-time">9:00 ص - 6:00 م</span></p>
+          <div class="actions"><a class="btn whatsapp" target="_blank" rel="noopener"
+              data-whatsapp="السلام عليكم، أرغب في التواصل مع امتثال الهندسية.">واتساب</a><a class="btn ghost"
+              href="mailto:info.emtithal@gmail.com">البريد الإلكتروني</a></div>
+        </div>
+        <form class="card">
+          <h2>نموذج التواصل</h2>
+          <div class="field"><label>الاسم</label><input></div>
+          <div class="field"><label>الجوال</label><input></div>
+          <div class="field"><label>الرسالة</label><textarea></textarea></div><button class="btn primary"
+            type="button">إرسال</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><img src="assets/logo/logo-dark.svg" alt="امتثال الهندسية" width="260" height="64">
+        <p>حلول هندسية متخصصة في الأمن والسلامة والامتثال بإجراءات واضحة وتجربة رقمية سهلة.</p>
+      </div>
+      <div>
+        <h3>تواصل</h3>
+        <p><a data-site="phone" href="tel:{{PHONE}}">{{PHONE}}</a><br><a data-site="email"
+            href="mailto:info.emtithal@gmail.com">info.emtithal@gmail.com</a></p>
+      </div>
+      <div>
+        <h3>الخدمات</h3>
+        <div class="small-links"><a href="#services" data-route="services">التقارير الفنية</a><a href="#services"
+            data-route="services">شهادات السلامة</a><a href="#services" data-route="services">تجديد الدفاع المدني</a>
+        </div>
+      </div>
+      <div>
+        <h3>روابط اجتماعية</h3>
+        <div class="small-links"><a href="#">X</a><a href="#">LinkedIn</a><a href="#">Instagram</a></div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+
+</html>
