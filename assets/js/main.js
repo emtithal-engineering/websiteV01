@@ -27,8 +27,8 @@ const services = [
     icon: "▤",
     name: "تقرير فني فوري",
     en: "Instant Technical Report",
-    priceLabel: "550 ريال شامل الضريبة",
-    basePrice: 478.26,
+    priceLabel: "517.50 ريال شامل الضريبة",
+    basePrice: 450,
     description: "تقرير فني سريع للمنشآت المستوفية للمتطلبات الأساسية خلال 24 ساعة.",
     features: ["تسليم خلال 24 ساعة", "معتمد عبر بلدي / سلامة", "مسار واضح بدون تعقيد"],
     docs: [
@@ -64,8 +64,8 @@ const services = [
     icon: "✓",
     name: "شهادة أدوات السلامة والوقاية من الحريق",
     en: "Safety Equipment Certificate",
-    priceLabel: "350 ريال شامل الضريبة",
-    basePrice: 304.35,
+    priceLabel: "287.50 ريال شامل الضريبة",
+    basePrice: 250,
     description: "إصدار شهادة منظمة لأدوات وأنظمة السلامة والوقاية من الحريق للمنشآت.",
     features: ["تدقيق بيانات المنشأة", "شهادة منظمة", "مناسبة للمتطلبات التشغيلية"],
     docs: [
@@ -435,6 +435,8 @@ function fillServiceDetails() {
     // Show electronic request option for other services
     if ($("#electronicRequestAction")) {
       $("#electronicRequestAction").parentElement.style.display = "block";
+      // Change electronic request to redirect to coming soon page
+      $("#electronicRequestAction").setAttribute("data-route", "electronic-coming-soon");
     }
   }
 
